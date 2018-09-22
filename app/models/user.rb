@@ -15,5 +15,4 @@ class User < ApplicationRecord
 #    length: { minimum: 8, maximum: 32, allow_blank: true }
 
   has_secure_password
-  
 end
