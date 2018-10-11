@@ -42,6 +42,10 @@ gem 'jbuilder', '~> 2.5'
   gem "jquery-rails"
   gem 'bcrypt'
 
+# 画像投稿機能の作成には「CarrierWave」というgemを使用します。
+# ※画像の扱いは思ったより複雑で難しいため、Gemをつかって簡単に扱えるようにします。
+  gem "carrierwave"
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
