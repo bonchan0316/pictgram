@@ -1,6 +1,8 @@
 class TopicsController < ApplicationController
   def index
     @topics = Topic.all.includes(:favorite_users)
+    @comments = @topic.comments.includes(:user).all
+    @comment = @topic.comments.build(user_id: current_user.id) if current_user
   end
 
   def new
@@ -15,6 +17,7 @@ class TopicsController < ApplicationController
     else
       flash.now[:danger] = "投稿に失敗しました"
       render :new
+
     end
   end
 
