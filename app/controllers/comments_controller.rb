@@ -5,6 +5,8 @@ class CommentsController < ApplicationController
 
   def create
     @comment = Comment.new
+    @comment.user_id = current_user.id
+    @comment.topic_id = params[:topic_id]
 
     if @comment.save
       redirect_to topics_path, success: 'コメントを登録しました'
