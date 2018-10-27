@@ -8,6 +8,7 @@
           <div class="form-group">
             <%= f.label :Comment %>
             <%= f.text_area :body, class: 'form-control' %>
+            <%= hidden_field_tag :topic_id, @comment.topic_id %>
           </div>
 
           <% if logged_in? %>
