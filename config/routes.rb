@@ -21,5 +21,6 @@ Rails.application.routes.draw do
   post '/favorites', to: 'favorites#create'
 
   post 'comments/new', to: 'comments#new'
+  post 'comments/create', to: 'comments#create'  
 
 end
