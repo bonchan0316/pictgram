@@ -4,6 +4,7 @@ class CreateTopics < ActiveRecord::Migration[5.2]
       t.integer :user_id
       t.string :description
       t.string :image
+      t.integer :favorites_count
 
       t.timestamps
     end
