@@ -20,7 +20,7 @@ Rails.application.routes.draw do
   get 'favorites/index'
   post '/favorites', to: 'favorites#create'
   delete '/favorites', to: 'favorites#destroy'
-  patch '/favorites', to: 'favorites#update'
+  get '/favorites', to: 'favorites#show'
 
   post 'comments/new', to: 'comments#new'
   post 'comments/create', to: 'comments#create'
