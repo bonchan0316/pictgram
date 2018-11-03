@@ -22,7 +22,6 @@ class FavoritesController < ApplicationController
     if favorite.nil?
       redirect_to topics_path, danger: 'お気に入りはすでに削除されています'
     elsif favorite.destroy
-      
       redirect_to topics_path, success: 'お気に入りを削除しました'
     else
       redirect_to topics_path, danger: 'お気に入りを削除に失敗しました'
